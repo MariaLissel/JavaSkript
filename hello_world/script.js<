@@ -1,0 +1,7 @@
+console.log("Hallo \"Welt\"".toUpperCase()) 
+console.log("Maria"[3])
+
+console.log(1 == 1)
+console.log(1.74937 + 17943469)
+console.log(5/7)
+console.log(3 > 6)
