@@ -8,17 +8,21 @@ Bsp. 1,3
 
 function oddNumbers(a, b) {
   if (a < 0 || b < 0) {
+    // wenn die Zahl negativ ist, endet hier der Loop
     return "must be non-negative.";
   }
   let result = ""; // ein Container/Speicher für den String als Leeraum
 
   for (let inumber = a; inumber <= b; inumber++) {
-    if (inumber % 2 !== 0) {
-      if (result.length > 0) {
-        result = result += inumber + ",";
-      }
-      result = result + inumber;
+    if (inumber % 2 === 0) {
+      // wenn die Zahl modulor 2 entspricht (= gerade Zahl), endet hier der Loop, falls nicht "continue"
+      continue;
     }
+    if (result.length > 0) {
+      // wenn die Charakter-Anzahl (die Zahlen sind strings = also sind es Charakter) größer als 0 ist, füge ein Komma hinzu
+      result = result + ",";
+    }
+    result = result + inumber;
   }
   return result;
 }
